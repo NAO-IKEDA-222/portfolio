@@ -1,0 +1,1208 @@
+html {
+      scroll-behavior: smooth;
+      display: block;
+      font-family: "Noto Serif JP";
+      margin-left: auto; 
+      margin-right: auto;
+      position: relative;
+    }
+/*ルートフォントサイズを調整*/
+  /* デスクトップ */
+html {
+  width: 1200px;
+}
+
+/* モバイル */
+@media (max-width: 767px) {
+  html {
+    width: 375px;
+  }
+}
+/*====カートアイコン ====*/
+.cart-button{
+    display:inline-block;
+    border-radius: 10px;
+    font-size: 16px;
+    padding:4px 32px;
+    color:black;
+    background: #fff;
+    border:1px solid goldenrod;
+    transition: .4s;
+    left:10%;
+    top:5%;
+    position: fixed;
+    z-index: 10;
+}
+/*PCサイズ*/
+@media(min-width:768px){
+.cart-button{
+  left:15%;
+  top:30px;
+}  
+}
+.cart-icon{
+    width: 20px; 
+}
+.cart-button:hover{
+  transform: translateY(-3px);
+}
+/*====JSなしグローバルナビゲーション ====*/
+.menu-wrapper{
+    position:relative;
+}
+.menu-icon{
+    width: 40px;
+    height: 30px;
+    position:fixed;
+    top:28px; 
+    right: 25px;
+    display:inline-block;
+    z-index: 15;
+    overflow: hidden;
+    padding:5px;
+    background:#fff;
+    border-radius: 10px;
+}
+/*PCサイズ*/
+@media(min-width:768px){
+.menu-icon{
+    top:30px; 
+    right: 200px;
+} 
+}
+.menu-icon span{
+    display: block;
+    height:4px;
+    margin:6px;
+    background: #333;
+    border-radius: 2px;
+    transition:0.4s;
+}
+#menu-toggle:checked+.menu-icon span:nth-child(1){
+ transform: translateY(10px) rotate(45deg);
+}
+
+#menu-toggle:checked+.menu-icon span:nth-child(2){
+    opacity: 0;
+}
+#menu-toggle:checked+.menu-icon span:nth-child(3){
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+.menu{
+    position:fixed;
+    top:0;
+    right:-250px;
+    width:250px;
+    height:100%;
+    background: #fff;
+    z-index:8;
+    transition: left 0.4s ease;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+}
+
+#menu-toggle:checked~.menu{
+    right:0;
+}
+.menu ul{
+    list-style: none;
+    padding: 60px 20px;
+}
+.menu li{
+    margin:20px;
+}
+.menu a{
+    text-decoration: none;
+    color:#2b2b2b;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+    position:relative;
+}
+.menu a::after{
+  content:'';
+  position:absolute;
+  left:50%;
+  height:1.5px;
+  background: #b88f51;
+  bottom:0;
+  width:0;
+  transition:width .3s ease, left .3s ease;
+}
+.menu a:hover::after{
+  width:100%;
+  left:0;
+}
+.menu a:hover{
+    color:#fff900;
+}
+
+/*====FV ====*/
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2b2b2b;
+}
+
+.logo {
+  position: absolute;
+  z-index: 3;
+  opacity: 1;
+  animation: fadeOutLogo 0.8s ease 1.5s forwards;
+}
+@keyframes fadeOutLogo {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.logo img {
+  max-width: 200px;
+  height: auto;
+}
+
+.gradient-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #2b2b2b 0%, #fff900 100%);
+  transform: translateY(100%);
+  z-index: 1;
+  animation: rollUp 1.2s ease 1.5s forwards;
+}
+@keyframes rollUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+
+.main-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  z-index: 2;
+  animation: fadeInImage 1.5s ease 2.7s forwards;
+}
+@keyframes fadeInImage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+
+.content {
+  position: relative;
+  z-index: 4;
+  opacity: 0;
+  padding: 0 20px;
+  animation: fadeInContent 1s ease 3s forwards;
+  text-align: center;
+}
+
+@keyframes fadeInContent {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+}
+
+.sub-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 0 2rem;
+  letter-spacing: 0.05em;
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 40px;
+  left: 40%;
+  transform: translateX(-50%);
+  z-index: 4;
+  opacity: 0;
+  animation: fadeInContent 1s ease 4s forwards;
+}
+/*PCサイズ*/
+@media(min-width:768px){
+  .scroll-hint{
+    left: 48%;
+  }
+}
+@keyframes fadeInContent {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.scroll-hint::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 80px;
+  background: #2b2b2b;
+  margin: 0 auto 10px;
+  animation: scrollLine 1.5s ease-in-out infinite;
+}
+@keyframes scrollLine {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  50% {
+    height: 80px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    opacity: 0;
+  }
+}
+.scroll-text {
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  white-space: nowrap;
+}
+
+
+    /* ===== スライダー ===== */
+    .slide {
+      width: 150px;
+      height: 90px;
+      object-fit: cover;/*画像や置換要素をコンテナにどのように合わせるかを指定*/
+    }
+    .slide-container {
+      width: 100%;
+      display: flex;
+      align-items: center;/*コンテナの中で交差軸に合わせて並べる*/
+      overflow: hidden;
+    }
+    .slide-wrapper {
+      display: flex;
+      animation: slide-flow 20s infinite linear  both;/*bothはforwardsとbackwarsの両方を適用し再生後再生前の状態を保持*/
+    }
+    @keyframes slide-flow {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+    /*====逆方向のスライダー ====*/
+    .slide {
+      width: 150px;
+      height: 90px;
+      object-fit: cover;/*画像や置換要素をコンテナにどのように合わせるかを指定*/
+    }
+    .co-slide-container {
+      width: 100%;
+      display: flex;
+      align-items: center;/*コンテナの中で交差軸に合わせて並べる*/
+      overflow: hidden;
+    }
+    .co-slide-wrapper {
+      display: flex;
+      animation: co-slide-flow 20s infinite linear  both;/*bothはforwardsとbackwarsの両方を適用し再生後再生前の状態を保持*/
+    }
+    @keyframes co-slide-flow {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  /* 終了時点：元の位置に配置 */
+  100% {
+    transform: translateX(0);
+  }
+    }
+/*====送料無料のポップアップ ====*/
+.pop-up-wrapper{
+  position: relative;
+}
+#pop-up{
+    font-size: 15px;
+    background: goldenrod;
+    opacity:.8;
+    color:#2b2b2b;
+    display:inline-block;
+    padding:20px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    border:1px solid goldenrod;
+    font-family: "Sans Selif JP";
+    position:fixed;
+    z-index: 3;
+    bottom:30px;
+    right:25px;
+    width:60px;
+    height:60px;   
+}
+/*PCサイズ*/
+@media(min-width:768px){
+ #pop-up{
+  right:190px;
+ }
+  
+}
+  /* 非表示状態 */
+  #pop-up.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+  }
+/*====about-us ====*/
+#about-us{
+  background-image: url('images/和服の女性.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; 
+  background-color: #2b2b2b;
+  background-blend-mode: overlay;
+  color:#fff;
+  padding: 60px 10px;
+}
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  padding-inline:.7rem;
+  margin-block: 1.5rem;
+}
+
+/*====商品紹介 ====*/
+.img-resize {
+  width: 320px;
+  height: 350px;
+  margin-right: 20px;
+}
+
+#product-information {
+  background-color: #2b2b2b;
+  color: #fff;
+  padding: 1rem;
+}
+/*PCサイズ*/
+@media(min-width:768px){
+ #product-information{
+  padding: 70px;
+ } 
+}
+
+/*====巾着 ====*/
+/* PCサイズ */
+@media (min-width: 768px) {
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .div1 {
+    grid-row: span 2 / span 2;
+  }
+
+  .div3 {
+    grid-column-start: 2;
+  }
+}
+
+/* ===== レイヤー順制御（画像 > 長方形 > セクション背景） ===== */
+.div1 {
+  position: relative; /* 擬似要素とimgの基準＋スタッキングコンテキスト */
+  display: inline-block; /* 画像サイズに合わせる */
+  z-index: 0; /* セクション背景より前に出すが、子要素で上書き可能にする */
+}
+
+.div1 img {
+  display: block;      /* 画像下の余白を消す */
+  max-width: 100%;     /* レスポンシブ対応 */
+  height: auto;
+  position: relative;  /* z-indexを有効にする */
+  z-index: 2;          /* 最前面（画像） */
+}
+/*PCサイズ*/
+@media(min-width:768px){
+  .div1 img {
+    margin-left: 100px;
+  }
+}
+
+/* 擬似要素で長方形を作成（中間レイヤー） */
+.div1::before {
+  content: "";
+  position: absolute;
+  top: -30px;    /* 縦方向のずらし量 */
+  left: 15px;   /* 横方向のずらし量 */
+  width: 320px;
+  height: 400px;
+  background: #fff900;
+  opacity: .4;  /* 半透明の長方形 */
+  z-index: 1;   /* 画像の下、セクション背景の上 */
+}
+/*PCサイズ*/
+@media(min-width:768px){
+.div1::before {
+  content: "";
+  position: absolute;
+  top: -30px;    /* 縦方向のずらし量 */
+  left: 30px;   /* 横方向のずらし量 */
+  width: 320px;
+  height: 400px;
+  background: #fff900;
+  opacity: .4;  /* 半透明の長方形 */
+  z-index: 1;   /* 画像の下、セクション背景の上 */
+}  
+}
+
+
+/*====財布 =====*/
+/*PCサイズ*/
+@media(min-width:768px){
+.co-parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+}
+    
+.div4 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.div5 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+.div6 {
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+
+.div7 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+}}
+
+.div4 {
+  position: relative; /* 擬似要素とimgの基準＋スタッキングコンテキスト */
+  display: inline-block; /* 画像サイズに合わせる */
+  z-index: 0; /* セクション背景より前に出すが、子要素で上書き可能にする */
+}
+
+.div4 img {
+  display: block;      /* 画像下の余白を消す */
+  max-width: 100%;     /* レスポンシブ対応 */
+  height: auto;
+  position: relative;  /* z-indexを有効にする */
+  z-index: 2;          /* 最前面（画像） */
+}
+/*PCサイズ*/
+@media(min-width:768px){
+  .div4 img {
+    margin-left: 100px;
+  }
+}
+/* 擬似要素で長方形を作成（中間レイヤー） */
+.div4::before {
+  content: "";
+  position: absolute;
+  top: -30px;    /* 縦方向のずらし量 */
+  right: 15px;   /* 横方向のずらし量 */
+  width: 320px;
+  height: 210px;
+  background: #fff900;
+  opacity: .4;  /* 半透明の長方形 */
+  z-index: 1;   /* 画像の下、セクション背景の上 */
+}
+
+/*PCサイズ*/
+@media(min-width:768px){
+.div4::before {
+  content: "";
+  position: absolute;
+  top: -30px;    /* 縦方向のずらし量 */
+  right: 30px;   /* 横方向のずらし量 */
+  width: 320px;
+  height: 210px;
+  background: #fff900;
+  opacity: .4;  /* 半透明の長方形 */
+  z-index: 1;   /* 画像の下、セクション背景の上 */
+}  
+}
+
+
+/*====ポーチ ====*/
+/*PCサイズ*/
+@media(min-width:768px){
+.sub-parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+}
+    
+
+.div9 {
+    grid-row: span 2 / span 2;
+    grid-row-start: 2;
+}
+
+.div10 {
+    grid-row-start: 2;
+}
+
+.div11 {
+    grid-column-start: 2;
+    grid-row-start: 3;
+}}
+
+.div9 {
+  position: relative; /* 擬似要素とimgの基準＋スタッキングコンテキスト */
+  display: inline-block; /* 画像サイズに合わせる */
+  z-index: 0; /* セクション背景より前に出すが、子要素で上書き可能にする */
+}
+
+.div9 img {
+  display: block;      /* 画像下の余白を消す */
+  max-width: 100%;     /* レスポンシブ対応 */
+  height: auto;
+  position: relative;  /* z-indexを有効にする */
+  z-index: 2;          /* 最前面（画像） */
+}
+@media(min-width:768px){
+  .div9 img {
+    margin-left: 100px;
+  }
+}
+/* 擬似要素で長方形を作成（中間レイヤー） */
+.div9::before {
+  content: "";
+  position: absolute;
+  top: -15px;    /* 縦方向のずらし量 */
+  left: 15px;   /* 横方向のずらし量 */
+  width: 320px;
+  height: 210px;
+  background: #fff900;
+  opacity: .4;  /* 半透明の長方形 */
+  z-index: 1;   /* 画像の下、セクション背景の上 */
+}
+
+/*PCサイズ*/
+@media(min-width:768px){
+.div9::before {
+  content: "";
+  position: absolute;
+  top: -30px;    /* 縦方向のずらし量 */
+  left: 20px;   /* 横方向のずらし量 */
+  width: 320px;
+  height: 210px;
+  background: #fff900;
+  opacity: .4;  /* 半透明の長方形 */
+  z-index: 1;   /* 画像の下、セクション背景の上 */
+}  
+}
+
+/*==== サコッシュ ====*/
+/*PCサイズ*/
+@media(min-width:768px){
+.end-parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+}
+    
+.div12 {
+    grid-column-start: 2;
+}
+
+.div13 {
+    grid-row-start: 2;
+}
+
+.div14 {
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+
+.div15{
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 2;
+}}
+.div15 {
+  position: relative; /* 擬似要素とimgの基準＋スタッキングコンテキスト */
+  display: inline-block; /* 画像サイズに合わせる */
+  z-index: 0; /* セクション背景より前に出すが、子要素で上書き可能にする */
+}
+
+.div15 img {
+  display: block;      /* 画像下の余白を消す */
+  max-width: 100%;     /* レスポンシブ対応 */
+  height: auto;
+  position: relative;  /* z-indexを有効にする */
+  z-index: 2;          /* 最前面（画像） */
+}
+@media(min-width:768px){
+  .div15 img {
+    margin-left: 100px;
+  }
+}
+/* 擬似要素で長方形を作成（中間レイヤー） */
+.div15::before {
+  content: "";
+  position: absolute;
+  top: -15px;    /* 縦方向のずらし量 */
+  right: 15px;   /* 横方向のずらし量 */
+  width: 320px;
+  height: 400px;
+  background: #fff900;
+  opacity: .4;  /* 半透明の長方形 */
+  z-index: 1;   /* 画像の下、セクション背景の上 */
+}
+
+/*PCサイズ*/
+@media(min-width:768px){
+.div15::before {
+  content: "";
+  position: absolute;
+  top: -30px;    /* 縦方向のずらし量 */
+  right: 20px;   /* 横方向のずらし量 */
+  width: 320px;
+  height: 400px;
+  background: #fff900;
+  opacity: .4;  /* 半透明の長方形 */
+  z-index: 1;   /* 画像の下、セクション背景の上 */
+}  
+}
+
+
+
+
+/*====ページネーション付きスライダー =====*/
+  /* スライダー本体 */
+
+  .swiper {
+    width: 230px;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #fff;
+  }
+
+  /* 外部ページネーション */
+  .custom-pagination {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
+
+  .custom-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #ccc;
+    opacity: 1;
+    margin: 0 5px;
+    border-radius: 50%;
+    transition: background  0.3s;
+  }
+
+  .custom-pagination .swiper-pagination-bullet-active {
+    background: #2b2b2b;
+  }
+
+
+/*====Voices====*/
+#choice-review{
+    background-image: url("images/２和風財布.jpeg");
+    background-color: #ecebcf;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 18px;
+}
+
+.voices-container {
+    margin: 25px 0;
+    position: relative;
+}
+
+.reason-choice-review{
+    text-align: left;
+}
+/*PCサイズ*/
+@media(min-width:768px){
+    .reason-choice-review{
+        margin-top: 40px;
+        margin-left: 40px;
+    }
+}
+.co-title-voice{
+    font-size: 14px;
+    text-align: center;
+}
+/*PCサイズ*/
+@media(min-width:768px){
+.co-title-voice{
+    font-size: 16px;
+}    
+}
+.voices-container{
+ display: block;
+ margin-left: 10px;
+ margin-right: 10px;
+ text-align: center;
+}
+
+/*PCサイズ*/
+@media(min-width:768px){
+.voices-container{
+    display: flex;              /* 横並び */
+    gap: 25px;                  /* 要素間の余白 */
+    align-items: flex-start;    /* 上揃え */
+    flex-wrap: wrap;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+  /* 高さをずらして斜めラインを作る */
+  .item:nth-child(1) { margin-top: 0; }
+  .item:nth-child(2) { margin-top: 30px; }
+  .item:nth-child(3) { margin-top: 60px; }
+}
+
+
+.item button {
+    width: 300px;
+    padding: 10px 15px;
+    background: #2b2b2b;
+    border: 2px solid #2b2b2b;
+    border-radius: 10px 10px 10px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    font-family: "Noto Serif JP" ;
+    transition: .4s;
+}
+
+.item button::before {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #2b2b2b;
+}
+.item p{
+    border: 3px solid #fff900;
+    font-size: 14px;
+    padding:20px;
+    box-shadow: 2% 0 8% rgba(0,0,0,.6);
+    width:260px;
+    transition: box-shadow 0.3s ease;
+}
+  
+.item p:hover{
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+/*====News お知らせ ====*/
+#News{
+    background: #2b2b2b;
+    color:#fff900;
+    padding: 10px;
+    
+}
+.news-document{
+    font-size: 14px;
+    color:#fff900;
+}
+    /* 桜を表示するコンテナのスタイル */
+.cherry-blossom-container {
+ 
+  position: relative;
+  height: 360px; /* コンテナの高さ */
+  width: 100%; /* コンテナの横幅 */
+  overflow: hidden; /* コンテナからはみ出した要素を隠す */
+}
+/*PCサイズ*/
+@media(min-width:768px){
+.cherry-blossom-container {
+  height:280px;
+  padding: 25px;
+}  
+}
+
+/* 桜の花びらのスタイル */
+.petal {
+  position: absolute;
+  background-color: #ffc0cb; /* 花びらの色 */
+  border-radius: 150% 0 150% 0;
+  animation: animate-petal 10s linear;
+}
+
+.petal::after {
+  content: "";
+  position: absolute;
+  top: -14%;
+  left: -10%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #ffc0cb;
+  border-radius: 150% 0 150% 0;
+  transform: rotate(15deg);
+}
+
+/* 花びらが降るアニメーション */
+@keyframes animate-petal {
+  0% {
+    top: 0;
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  10% {
+    opacity: .3;
+  }
+  90% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 0;
+    top: 100vh;
+    transform: rotate(3000deg);
+  }
+}
+/*====FAQ ====*/
+#faq{
+    background: #eeedb3;
+    background-image: url("images/着物の布.jpeg");
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    padding:15px;
+}
+.faq-question{
+    border:1px solid #fff900;
+    background: #2b2b2b;
+    color:#fff900;
+    font-size: 15px;
+    padding: 1rem 1.5rem;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+    width:200px;
+}
+
+/*PCサイズ*/
+@media(min-width:768px){
+    .faq-question{
+       width:450px; 
+    }
+}
+.faq-font{
+    color:#b88f51;
+    font-size: 16px;
+    margin-right: 15px;
+}
+/*PCサイズ*/
+@media(min-width:768px){
+  .faq-font{
+    color:#b88f51;
+    font-size: 20px;
+}  
+}
+.faq-answer{
+    height:0;
+    overflow: hidden;
+    transition:.4s;
+    background: #fff;
+    color:#2b2b2b;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width:180px;
+    padding:0 3% 0 5%;
+    font-size: 14px;
+}
+/*PCサイズ*/
+@media(min-width:768px){
+ .faq-answer{
+    width:400px;
+ }   
+}
+.js-question.is-active +.faq-answer{
+    height:20rem;
+}
+/*PCサイズ*/
+@media(min-width:768px){
+   .js-question.is-active +.faq-answer{
+    height:160px;
+   } 
+}
+.js-question::after{
+    content:'＋';
+    transition:.4s;
+}
+.js-question.is-active::after{
+    transform:rotate(45deg);
+}
+.contact-form-guide{
+    text-decoration: none;
+    display:block;
+}
+
+.announce{
+    text-align: center;
+    padding: 20px;
+}
+.guidance-button{
+    display: block;
+    padding: 10px 20px;
+    background: #2b2b2b;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    transition: .4s;
+    font-family: "Noto Serif JP";
+}
+.guidance-button:hover{
+    background:goldenrod;
+    
+}
+.a-guidance{
+    text-decoration: none;
+    color:#fff;
+}
+/*====お問い合わせ =====*/
+.first-contact{
+    font-size: 14px;
+}
+#contant{
+margin-left: 10px;
+}
+form{
+    width:70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*PCサイズ*/
+@media(min-width:768px){
+ form{
+  position:relative;
+  width:60%;
+ } 
+}
+.form-row{
+    display:block;
+    align-items: center;
+    padding:20px;
+    border-bottom: 1px solid goldenrod;
+}
+/*PCサイズ*/
+@media(min-width:768px){
+ .form-row{
+    display:flex;
+} 
+}
+.form-row:last-child{
+    border-bottom: none;
+}
+.form-label{
+    display: flex;
+    align-items: center;
+    width:250px;
+}
+.form-label span{
+    margin-left:25px;
+    margin-bottom: 7px;
+    padding: 2px 6px;
+    background: #2d2d2d;
+    color:#fff;
+    font-size: 14px;
+}
+/*PCサイズ*/
+@media(min-width:768px){
+.form-label span{
+ margin-bottom: 0; 
+ position:absolute;
+ left:18%;
+}  
+}
+input,textarea{
+    background-color: #f2f4f5;
+    border:none;
+    font-size: 16px;
+    padding:10px 10px;
+    flex-grow: 1;
+    width:235px;
+    margin-right: 20px;
+}
+textarea {
+    resize: none;
+}
+input::placeholder,
+textarea::placeholder{
+    color:#999;
+    font-size: 14px;
+    font-family: "Noto Serif JP";
+}
+form button{
+    margin-top:20px;
+    border:none;
+    padding:15px 45px;
+    border-radius: 3px;
+    background: goldenrod;
+    font-weight: bold;
+    transition:.3s;
+}
+/*PCサイズ*/
+@media(min-width:768px){
+  form button{
+    display: block;
+    left:45%;
+    position: absolute;
+  }
+}
+form button:hover{
+  background: #fff900;
+}
+/*==== パララックス背景セクション==== */
+        .parallax-section {
+            height: 65vh; /* ビューポートの高さいっぱい */
+            background-image: url('images/和風小物.jpeg');
+            background-attachment: fixed; /*背景を固定*/
+            background-position: center; 
+            background-repeat: no-repeat; 
+            background-size: cover; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            background-color: #2b2b2b;
+            background-blend-mode: overlay;
+        }
+
+        /* 通常のコンテンツセクション */
+        .content-section {
+            padding: 80px 20px;
+            background-color: #2b2b2b;
+            text-align: center;
+            max-width: 375px;
+            margin: 0 auto;
+            color: #fff;
+        }
+      /*PCサイズ*/
+@media(min-width:768px){
+  .content-section{
+    max-width: 1200px;
+  }
+}
+        .parallax-section h1 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color:#fff;
+           
+        }
+
+        .parallax-section p {
+            font-size: 1.2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            color: #fff;
+             writing-mode: vertical-rl;
+        }
+
+
+/*====フッター =====*/
+footer{
+    text-align: left;
+    padding:10px;
+    font-size: 14px;
+    color:#fff;
+    z-index: 15;
+
+}
+.sns{
+    padding:8px;
+}
+/*====back-to-top ====*/    
+
+#back-to-top{
+    display:inline-block;
+    bottom:30px;
+    right:20px;
+    position:absolute;
+    background: #2b2b2b;
+    color:#fff;
+    padding:10px 20px;
+    border-radius: 2px;
+    border:1px solid #fff;
+    z-index: 1;
+}
+.midashi{
+    text-align: center;
+    font-size:1.5rem;
+    color:#2b2b2b;
+}
