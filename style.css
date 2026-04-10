@@ -137,7 +137,7 @@ footer {
 
 /*==== トップビューの下（六角形帯） ====*/
 .hexagon {
-  background-image: url("images/スポーツジムの内装 (3).jpeg");
+  background-image: url("images/スポーツジムの内装 (3).jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -626,7 +626,7 @@ height: var(--fade-size);
   box-sizing: border-box;
   position: relative;
 
-  background-image: url("images/（透過）スポーティーな服装な男性 (3).png");
+  background-image: url("images/（透過）スポーティーな服装な男性 (3).jpg");
   background-color: #4d0f41;
   background-blend-mode: soft-light;
   background-repeat: no-repeat;
@@ -836,19 +836,19 @@ blockquote::after{
 
 /*各項目に専用背景を割り当てる*/
 .parallax-01{
-  background-image: url("images/スポーティーな服装な男性 (2).jpeg");
+  background-image: url("images/スポーティーな服装な男性 (2).jpg");
 }
 .parallax-02{
   background-image: url("images/30190091_m.jpg");
 }
 .parallax-03{
-  background-image: url("images/インストラクター風の男性.jpeg");
+  background-image: url("images/インストラクター風の男性.jpg");
 }
 .parallax-04{
-  background-image: url("images/インストラクター風の女性.jpeg");
+  background-image: url("images/インストラクター風の女性.jpg");
 }
 .parallax-05{
-  background-image: url("images/プロテイン (2).jpeg");
+  background-image: url("images/プロテイン (2).jpg");
 }
 
 /*各項目内でグリッドを完結させる*/
@@ -867,7 +867,7 @@ blockquote::after{
 
 /*====トレーニングの流れ ====*/
 #training-flow{
-    background-image: url("images/スポーツジムの内装 (4).jpeg");
+    background-image: url("images/スポーツジムの内装 (4).jpg");
     background-color: #4d0f41;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1293,7 +1293,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible{
 /*====よくあるご質問 ====*/
 #faq{
     background-color: #4d0f41;
-    background-image: url("images/スポーツジムの内観.jpeg");
+    background-image: url("images/スポーツジムの内観.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode:soft-light;
@@ -1500,7 +1500,7 @@ footer{
     height: 700px;
     width:1200px;
     margin: 0 auto;
-    background-image: url('images/アートボード 1.png');
+    background-image: url('images/アートボード 1.jpg');
     background-position: center bottom;
     background-size: cover;
     background-repeat: no-repeat;
