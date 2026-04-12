@@ -1,568 +1,478 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>ヨガ・フィットネスSiX</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>むすびや</title>
+
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<link rel="stylesheet"  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-<section class="top-view" id="top-view">
-<img src="images\ロゴ.jpg" class="first-view-logo">
-<button class="free-join-btn">無料見学・体験のご予約　→</button>
-<button class="web-join-btn">Web入会はこちら（24時間受付）　→</button>
+<!--====グローバルナビゲーション ====-->
+<div class="menu-wrapper">
+<input type="checkbox" id="menu-toggle" hidden>
+<label for="menu-toggle" class="menu-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+</label>
+<nav class="menu">
+    <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#about-us">About us</a></li> 
+        <li><a href="#product-information">Products</a></li>
+        <li><a href="#choice-review">Voices</a></li>
+        <li><a href="#News">News</a></li>
+        <li><a href="#faq">FAQ<br>よくあるご質問</a></li>
+        <li><a href="#contact">Contact<br>お問い合わせ</a></li>
 
+</ul>
+</nav>
+</div>
+
+</div>
+<!--====カートアイコン====-->
+<button class="cart-button"><img class="cart-icon" src="images/カートのアイコン素材.png"></button>
+<!--====FV====-->        
+<div class="container">
+  
+  <div class="logo">
+    <img src="images/和風小物.jpeg" alt="Logo">
+  </div>
+  
+  <div class="gradient-bg"></div>
+  
+  <img src="images/財布.jpg" alt="Main Image" class="main-image">
+
+  <div class="content">
+    <h1 class="main-title">むすびや<br>Musubiya</h1>
+    <p class="sub-title">-あなたのそばに-<br>和風小物</p>
+  </div>
+
+  <div class="scroll-hint">
+    <div class="scroll-text">SCROLL</div>
+  </div>
+
+</div>
+
+<!--====スライダー =====-->
+<div class="slide-container">
+
+<div class="slide-wrapper">
+<img class="slide" src="images/一点もの財布.jpeg" alt="スライド1">
+<img class="slide" src="images/巾着.jpeg" alt="スライド2">
+<img class="slide" src="images/ポーチ.jpeg" alt="スライド3">
+<img class="slide" src="images/和風サコッシュ.jpg" alt="スライド4">
+</div>
+
+<div class="slide-wrapper">
+<img class="slide" src="images/一点もの財布.jpeg" alt="スライド1">
+<img class="slide" src="images/巾着.jpeg" alt="スライド2">
+<img class="slide" src="images/ポーチ.jpeg" alt="スライド3">
+<img class="slide" src="images/和風サコッシュ.jpg" alt="スライド4">
+</div>
+
+<div class="slide-wrapper">
+<img class="slide" src="images/一点もの財布.jpeg" alt="スライド1">
+<img class="slide" src="images/巾着.jpeg" alt="スライド2">
+<img class="slide" src="images/ポーチ.jpeg" alt="スライド3">
+<img class="slide" src="images/和風サコッシュ.jpg" alt="スライド4">
+</div>
+
+</div>
+
+<!--====逆方向のスライダー ====-->
+<div class="co-slide-container">
+
+<div class="co-slide-wrapper">
+<img class="slide" src="images/和風かばん.jpeg">
+<img class="slide" src="images/2和風ポーチ.jpeg">
+<img class="slide" src="images/和風がま口財布.webp">
+<img class="slide" src="images/財布.jpg">
+</div>
+
+<div class="co-slide-wrapper">
+<img class="slide" src="images/和風かばん.jpeg">
+<img class="slide" src="images/2和風ポーチ.jpeg">
+<img class="slide" src="images/和風がま口財布.webp">
+<img class="slide" src="images/財布.jpg">
+</div>
+
+<div class="co-slide-wrapper">
+<img class="slide" src="images/和風かばん.jpeg">
+<img class="slide" src="images/2和風ポーチ.jpeg">
+<img class="slide" src="images/和風がま口財布.webp">
+<img class="slide" src="images/財布.jpg">
+</div>
+</div>
+
+<!--=====送料無料のポップアップ =====-->
+<div class="pop-up-wrapper">
+<div id="pop-up">送料無料<br>キャンペーン中</div>
+</div>
+<!--====About Us ====-->
+<section id="about-us" class="about-us">
+<div class="vertical-text"　data-aos="fade-up">
+<h2></h2>
+<h3>和服リメイクの小物といえば
+<strong>むすびや</strong></h3>
+<h3>愛されて創業二十年。</h3>
+<h3>世界に一つだけの商品を<br>毎月五十点以上ラインナップ。</h3>
+<h3>もう着なくなったけど<br>お洒落な和服をリメイクして<br>
+もう一度命を吹き込むのが<br>わたしたち むすびや の役割。</h3></div>
+<br>
+<p>
+About Us  <br>
+When it comes to small items made from remade traditional Japanese clothing, it's Musubiya.  <br>
+Loved by many, we have been in business for twenty years. <br>
+We offer more than 50 unique products each month.<br> 
+Even if you no longer wear it,  
+remaking stylish kimonos  
+and giving them a new life  
+is our role at Musubiya.</p>
+</section>
+
+
+<section id="product-information" class="product-information">
+<!--巾着-->
+<h2 data-aos="fade-up">#01</h2>
+<h2 data-aos="fade-up">巾着/Drawstring bag</h2><br>
+<div class="parent">
+    <div class="div1">
+  <img src="images/一点もの巾着.jpeg" class="img-resize" alt="サンプル画像" data-aos="fade-up">
+</div>
+    <div class="div2"><h3 class="product-memo">海外の方にも受け良しな一品。御朱印帳も入るからお好きな柄をじっくり選んでみて。
+      <br>
+    A popular item even with people from abroad. It can also hold a goshuincho, so take your time to pick your favorite design.
+    </h3></div>
+    <div class="div3">「可愛い」。休日の日は一点もの巾着を
+    いつものご褒美に手ぶらにお供。
+    いつも頑張っている自分がさらに素敵、美しい。
+    今日は金平糖とあられでも入れてみたり…はんなり上品。
+</div>
+</div>
+
+
+<br><br>
+
+<!--財布-->
+<div class="co-parent">
+<div class="div7">
+<h2 data-aos="fade-up">#02</h2>
+<h2 data-aos="fade-up">財布/Wallet</h2><br>
+</div>
+<div class="div4">
+<img src="images/一点もの財布.jpeg" class="img-resize" data-aos="fade-up">
+</div>
+<div class="div5">
+<h3 class="product-memo">大切な貴重品を入れるお財布を普段使いに。
+    長財布から小銭入れまでしっとり上質な
+    肌ざわりのお財布にしましょ。<br>
+  Use a wallet that holds your important valuables for everyday use. From long wallets to coin purses, choose one with a smooth, high-quality feel.
+  </h3></div>
+<div class="div6">
+<h4>「あら素敵」。その秘密は
+    むすびや社員が情熱とまごころ込めて一点一点
+    つくっているから。ほのかな香りも高級感があります。
+    大切な人への贈り物にもどうぞ。
+    </h4></div>
+</div>
+
+<br><br>
+<!--ポーチ-->
+<div class="sub-parent">
+<div class="div8">
+<h2 data-aos="fade-up">#03</h2>
+<h2 data-aos="fade-up">ポーチ/Pouch</h2></div>
+
+<div class="div9">
+<img src="images/ポーチ.jpeg" class="img-resize" data-aos="fade-up">
+</div>
+
+<div class="div10">
+<h3 class="product-memo">化粧品入れにも身の回りの小物入れにも。
+    例えばこのポーチは目を奪われた帯から
+    つくってみたの。<br>
+    It can be used as a makeup bag or a small personal item pouch. For example, I tried making this pouch from an obi that caught my eye.
+</h3></div>
+
+ <div class="div11">
+<h4>ちりめん。ふうせん。
+    「ソバに置いて眺めてるだけでもいいの」。
+    ファスナー部位も職人技が光るから嬉しい設計。
+    和風って敷居が高く感じていたけどそんなことないの。
+    何歳からでもで上限はなし。
+    </h4></div>
+</div>
+
+<br><br>
+
+<!--サコッシュ-->
+<div class="end-parent">
+
+ <div class="div12">
+<h2 data-aos="fade-up">#04</h2>
+<h2 data-aos="fade-up">サコッシュ/Sacoche</h2>
+</div>
+
+<div class="div15">
+<img src="images/和風サコッシュ.jpg" class="img-resize" data-aos="fade-up">
+</div>
+
+<div class="div13">
+<h3 class="product-memo">貴重品やスマホがすっぽり入るサコッシュ。
+    肩からかけて手軽に安心、携帯しましょ。<br>
+   A sacoche that can easily fit valuables and your smartphone. Carry it over your shoulder for convenience and peace of mind. 
+</h3>
+</div>
+
+<div class="div14">
+<h4>
+    ひとつあると助かるのよ。ハンドメイドだから設計できる
+    内側ポケットも洗練されてて使い勝手がいいの。もちろん
+    お着物にも似合うし、特別な晴れの日には見につけてほしい一点もの。
+    </h4></div>
+  </div>
+    
+</section>
+
+<!--====ページネーション付きスライダー ====-->
 <!-- スライダー -->
 <div class="swiper">
   <div class="swiper-wrapper">
-    <div class="swiper-slide slide1"><img src="images/(PC版)FV（改）入会費10,000円.jpg" width="680px" height="370px"></div>
-    <div class="swiper-slide slide2"><img src="images/（PC版）FV魅せる身体.jpg" width="680px" height="370px"></div>
-    <div class="swiper-slide slide3"><img src="images/（PC版）FVスタジオレッスン.jpg"width="680px" height="370px"></div>
-      <div class="swiper-slide slide1"><img src="images/トップビューのサムネ（プロのコーチング）.jpg" width="680px" height="370px"></div>
-    <div class="swiper-slide slide2"><img src="images/トップビューのサムネ（食事管理つき）.jpg" width="680px" height="370px"></div>
-</div>
-
-    <!-- 必要に応じてナビボタン（スライダー内） -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <div class="swiper-slide slide1"><img src="images/巾着.jpeg" width="230px" height="150px"></div>
+    <div class="swiper-slide slide2"><img src="images/和風かばん.jpeg" width="230px" height="150px"></div>
+    <div class="swiper-slide slide3"><img src="images/和風がま口財布.webp"width="230px" height="150px"></div>
   </div>
 </div>
-  <!-- 外部ページネーション（スライダーの下） -->
-  <div class="custom-pagination"></div>
-</section>
+<!-- 外部ページネーション -->
+<div class="custom-pagination"></div>
 
-<!-- トップビューの下 -->
-<section id="bottom-top-view" class="bottom-top-view">
-  <div class="hexagon">
-    <div class="hex">店舗地域<br>拡大中</div>
-    <div class="hex">24時間<br>365日<br>営業</div>
-    <div class="hex">トレーナー<br>常駐</div>
-  </div>
-</section>
+<!--====Voices ====-->
+<section id="choice-review">
+    <h3 class="reason-choice-review">むすびや が選ばれる理由<br>Voices</h3>
+    <p class="co-title-voice">～お客様から頂いた「声」を元にしております～</p>
 
-<!--==== FVの下のキャンペーン帯 ====-->
-<section id="campaign-announce">
-    <div class="campaign-container">
-
-        <!-- クリップパス（ダンベル） -->
-        <div class="clip-shape">
-           <img src="images/（130px）ダンベル（透過）.png" width="130px" height="130px">
+    <div class="voices-container">
+        <div class="item">
+        <button>"何世代にも渡って愛される商品ばかり"</button><br>
+        <p>先日祖母の誕生日の記念品で利用しました。こぼれるような笑顔に
+            ほっこり心が温まりました。ラインナップが豊富なので選んでいる時間がたっぷり、とても充実
+            した時間を過ごせるのも嬉しいです。和カフェ・和菓子喫茶店巡りのときにむすびやの財布を
+            取り出すとき、買ってよかったとしみじみ感じます。
+        </p>
         </div>
-
-        <!-- 白背景エリア：テキスト＋画像 -->
-        <div class="content-area">
-            <div class="campaign-text">
-    今なら<span class="marker text-font-size">10,000円</span>相当の<br>
-    <span class="marker text-font-size">ヨガマット</span>　or　
-    <span class="marker text-font-size">プロテイン</span><br>
-    プレゼント！
-</div>
-
-<div class="gift-images">
-<img src="images/ekusasaisumatto.jpg" width="220px" height="130px">
-<img src="images/プロテイン (3).jpg" width="220px" height="130px">
-            </div>
+        
+        <div class="item">
+        <button>"日本の伝統的なスタイルを手にとれる"</button>
+        <p class="customer-voice">ニューヨーク在住ですが、日本独特の繊細な美を手にできるネットショッピングが趣味です。
+            日本へ旅行した際、着物を着て和の息吹を感じながら散策をしているときに、むすびや商品のサコッシュがとてもお気に入りでした。
+            コレクションにしてインテリアと一緒に飾り付けにするのも楽しいです。
+            </p>
         </div>
-    </div>
-</section>
-
-<!--====お悩みリスト ====-->
-<section id="worry" class="worry">
-      <!-- リボンはセクション直下に置く（absolute基準） -->
-  <h3 class="ribbon-worry">
-    このような <span class="yellow-font">お悩み</span> を<br>
-    <span class="step-font-size">一緒</span>に <span class="step-font-size">解消</span> しましょう！
-  </h3>
-<div class="worry-inner">
-
-<div class="worry-list">
-<!--左カラム-->
-<div class="worry-list-left">
-    <div class="worry-item">体力に自信がなくなってきた…</div>
-    <div class="worry-item">ジムに通いたいが<br>忙しくて時間帯が合わない…</div>
-    <div class="worry-item">デスクワークでの血行不良を<br>なんとかしたい…</div>
-    </div>
-
-<!--右カラム-->
-<div class="worry-list-right">
-     <div class="worry-item">猫背などの姿勢を改善したい…</div>
-    <div class="worry-item">メリハリのあるボディを<br>つくりたい…</div>
-    </div>   
-</div>
+        
+        <div class="item">
+        <button>"同封のメッセージカードが毎回楽しみ"</button><br>
+        <p class="customer-voice">季節ごとに移ろう四季を感じるデザインのメッセージカードに
+            いつも目を奪われます。日本の寺社仏閣がモチーフにされたお写真と添えられている文章に
+            味があります。和服老舗店舗さんとのコラボ企画も情熱が伝わってきて、
+            何回もリピートしています。商品の梱包も丁寧で選んで良かったといつも思います。
+        </p>   
+        </div>
 </div>
 </section>
 
-<!--====お悩みに合わせてコーチング ====-->
-<section id="worry-coaching" class="worry-coaching">
-  <div class="worry-coaching-title">当店では<span class="coaching-title-size">お悩み</span>に合わせて<br>プロの<span class="coaching-title-size">トレーナー</span>が<span class="coaching-title-size">コーチング</span></div>
 
-  <!-- 左カード -->
-  <div class="coaching-card-container">
-    <div class="coaching-card">マシントレーニング</div>
-    <div class="coaching-card-explain">
-      マシンの使い方は何度でもご案内します。目的に合わせた効率の良いマシン選びもアドバイスします。
-    </div>
-    <div class="coaching-slider">
-      <!-- 連続スクロールのため track を追加し、同順序を2回並べる -->
-      <div class="coaching-slider-track">
-        <!-- 1巡目 -->
-        <div class="coaching-slide"><img src="images/スポーツジムの内装.jpg" width="200px" height="115px"></div>
-        <div class="coaching-slide"><img src="images/トレーニングしている人.jpg" width="200px" height="115px"></div>
-        <div class="coaching-slide"><img src="images/トレーニングしている人 (2).jpg" width="200px" height="115px"></div>
-        <!-- 2巡目（複製） -->
-        <div class="coaching-slide"><img src="images/スポーツジムの内装.jpg" width="200px" height="115px"></div>
-        <div class="coaching-slide"><img src="images/トレーニングしている人.jpg" width="200px" height="115px"></div>
-        <div class="coaching-slide"><img src="images/トレーニングしている人 (2).jpg" width="200px" height="115px"></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 右カード -->
-  <div class="coaching-card-container">
-    <div class="coaching-card">スタジオレッスン</div>
-    <div class="coaching-card-explain">
-      ヨガ・ピラティス・ダンス系などのレッスンに参加できます。楽しく運動をしたい人におすすめです。
-    </div>
-    <div class="coaching-slider">
-      <div class="coaching-slider-track">
-        <!-- 1巡目 -->
-        <div class="coaching-slide"><img src="images/トレーニングしている人 (7).jpg" width="200px" height="115px"></div>
-        <div class="coaching-slide"><img src="images/トレーニングしている人  (3).jpg" width="200px" height="115px"></div>
-        <div class="coaching-slide"><img src="images/トレーニングしている人 (6).jpg" width="200px" height="115px"></div>
-        <!-- 2巡目（複製） -->
-        <div class="coaching-slide"><img src="images/トレーニングしている人 (7).jpg" width="200px" height="115px"></div>
-        <div class="coaching-slide"><img src="images/トレーニングしている人  (3).jpg" width="200px" height="115px"></div>
-        <div class="coaching-slide"><img src="images/トレーニングしている人 (6).jpg" width="200px" height="115px"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!--====さらに嬉しい効果 ====-->
-<section id="pleasant-effects" class="pleasant-effects">
-
-    <div class="image-wrap">
-  <img src="images/さらに（透過）.png" alt="サンプル画像">
-</div>
-<div class="pleasant-effects-title">
-お悩み解消に加えて<br>
-<span class="effect-marker">嬉しい効果</span>も<span class="font-size-up">相乗</span>できます！
-</div>
-
-<div class="pleasant-effects-container">
-<figure class="effects-type">
-<img class="effects-chart" src="images/インストラクター風の男性 (3).jpg">
-<figcaption class="effect-explain">
-自信につながり<br>自分のことがもっと<br>好きになれる
-</figcaption>
-</figure>
-
-<figure class="effects-type">
-<img class="effects-chart" src="images/インストラクター風の男性.jpg">
-<figcaption class="effect-explain">
-関節の可動域が<br>大きくなり<br>バランス感覚が良くなる
-</figcaption>
-</figure>
-
-<figure class="effects-type">
-<img class="effects-chart" src="images/スポーティーな服装な女性. (9).jpg">
-<figcaption class="effect-explain">
-代謝がよくなり<br>オンオフの切り替えが<br>よりうまくなる
-</figcaption>
-</figure>
-
-<figure class="effects-type">
-<img class="effects-chart" src="images/トレーニングしている人 .jpg">
-<figcaption class="effect-explain">
-呼吸が深くなり<br>リラックス効果が<br>期待できる
-</figcaption>
-</figure>
-</div>
-
-
-
-  <div class="custom-shape-divider-top-1774490074">
-    <svg xmlns="http://www.w3.org/2000/svg"
-         viewBox="0 0 1200 120"
-         preserveAspectRatio="none">
-      <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86
-               82.39-16.72,168.19-17.73,250.45-.39
-               C823.78,31,906.67,72,985.66,92.83
-               c70.05,18.48,146.53,26.09,214.34,3
-               V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-            class="shape-fill"></path>
-    </svg>
-  </div>
-
-
-</section>
-
-
-
-<!--====２つボタン　今ならキャンペーン ====-->
-<section id="campaign-box" class="campaign-box">
-
-<div class="campaign-box-title">
-今なら<span class="box-font-size">入会費10,000円</span>相当の<br>プレゼント<span class="box-font-size">キャンペーン</span>
-</div>
-<div class="sub-campaign-box-title">ヨガマット　or　プロテイン<br>どちらかお選びいただけます</div>
-<div class="campaign-box-wrapper">
-    <img src="images/ekusasaisumatto.jpg" width="200px" height="146px">
-    <img src="images/プロテイン (3).jpg" width="200px" height="146px">
-</div>
-<div class="join-btn-wrapper">
-<button class="free-join-btn">無料見学・体験のご予約　→</button>
-<button class="web-join-btn">Web入会はこちら（24時間受付）　→</button>
-</div>
-
-<div class="custom-shape-divider-bottom-1774491809">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-    </svg>
-</div>
-
-</section>
-
-
-<!--====サービスの特徴 ====-->
-<section id="feature-section" class="feature-section">
-<div class="feature-title">サービスの特徴</div>
-
-<div class="content-section parallax-01">
-  <div class="item-grid">
-
-    <div data-aos="fade-up">
-      <span class="block-benefit">
-        <div class="con-right">01.</div>
-        <br>入会後は全国どこでも利用可能です
-      </span>
-    </div>
-<blockquote data-aos="fade-up">
-24時間365日いつでもご利用可能です。朝活・夜勤明け・国内出張・旅行先でもしっかりお身体のメンテナンスできます。自宅から最寄り・会社帰りで行ける場所等、途切れないジム通いをサポート致します。
-</blockquote>
-  </div>
-</div>
-
-
-<div class="content-section parallax-02">
-  <div class="item-grid">
-
-    <div data-aos="fade-up">
-      <span class="block-benefit">
-        <div class="con-right">02.</div>
-        <br>身の回り品が揃った自販機があります
-      </span>
-    </div>
-<blockquote data-aos="fade-up">
-手ぶらでOK！ウエア上下やフェイスタオル、バスタオル、ヨガマット、トレーニングシューズ、プロテインなどご用意してお待ちしております。サウナスーツウエアは定番の人気商品です。
-</blockquote>
-  </div>
-</div>
-
-
-<div class="content-section parallax-03">
-  <div class="item-grid">
-
-    <div data-aos="fade-up">
-      <span class="block-benefit">
-        <div class="con-right">03.</div>
-        <br>トレーナーが2人常駐しております
-      </span>
-    </div>
-<blockquote data-aos="fade-up">
-プロのトレーナーがコーチングするから頑張れます。その日に合わせたご体調・体重＆筋肉量＆体脂肪計測・食事項目・睡眠時間・ワークライフの内容・ご要望等、充実したカウンセリング
-からプログラムを組みます。
-</blockquote>
-  </div>
-</div>
-
-
-<div class="content-section parallax-04">
-  <div class="item-grid">
-
-    <div data-aos="fade-up">
-      <span class="block-benefit">
-        <div class="con-right">04.</div>
-        <br>どの店舗も設備がほとんど同じです
-      </span>
-    </div>
-<blockquote data-aos="fade-up">
-ご利用店舗が変わってもご安心ください。常に進化し続けるマシンを追求しております。
-映画やアニメがみられる液晶付きのランニングマシン・階段昇降機はもちろん、
-人気の溶岩ホットヨガや暗闇ヨガ、キックボクシング、ダンス含めてプログラムは約40種類ございます。
-</blockquote>
-  </div>
-</div>
-
-
-<div class="content-section parallax-05">
-  <div class="item-grid">
-
-    <div data-aos="fade-up">
-      <span class="block-benefit">
-        <div class="con-right">05.</div>
-        <br>シャワーやドリンクバーなども完備
-      </span>
-    </div>
-<blockquote data-aos="fade-up">
-滝汗もスッキリ。お待たせすることもない男女計30室の清潔を維持したシャワー室を完備しております。
-筋肉増量や体質にこだわったプロテイン・サプリメントサーバー飲料による水分補給も存分にご利用ください。
-</blockquote>
-  </div>
-</div>
-
-</section>
-
-
-<!--====トレーニングの流れ ====-->
-<section class="training-flow" id="training-flow">
-<div class="midashi">トレーニングの流れ</div>
-
-<div class="training-flow-container">
-
-<figure class="interval">
-<div class="step-number">01/</div>
-<img src="images/インストラクター風の女性 (3).jpg" class="figure-picture">
-<figcaption class="explain-mode">受付・お着替え</figcaption>
-</figure>
-
-<figure class="interval">
-<div class="step-number">02/</div>
-<img src="images/インストラクター風の男性 (4).jpg" class="figure-picture">
-<figcaption class="explain-mode">トレーナーによる<br>カウンセリング</figcaption>
-</figure>
-
-
-<figure class="interval">
-<div class="step-number">03/</div>
-<img src="images/トレーニングしている人 (8).jpg" class="figure-picture">
-<figcaption class="explain-mode">その日に合わせた<br>最適プログラム</figcaption>
-</figure>
-
-<figure class="interval">
-<div class="step-number">04/</div>
-<img src="images/スポーツジムの外観.jpg" class="figure-picture">
-<figcaption class="explain-mode">シャワー・サプリ<br>ドリンクの摂取</figcaption>
-</figure>
-
+<!--====News お知らせ ====-->
+<section id="News">
+<div class="cherry-blossom-container">
+<h4>お知らせ</h4>
+<h2>NEWS</h2>
+<p class="news-document">
+むすびや20周年記念。送料無料のキャンペーン開催中！
+<br>2026.2.1
+</p>
+<p class="news-document">
+京都府西陣織老舗○○○商店様とのコラボ商品販売。どれも一点ものなのでお買い物はお早めに。
+<br>2026.1.15
+</p>
+<p class="news-document">
+明けましておめでとうございます。毎月変わる恒例のパッケージデザイン、今月は午年（うまどし）を記念にしたラッピングです。
+<br>2026.1.4
+</p>
 </div>
 </section>
-<!--====ご利用料金 ====-->
-<section class="price-section" id="price-section">
-  <!-- 角に“くいこむ”円形画像 -->
-  <img class="price-picture-left" src="images/ekusasaisumatto.jpg" >
-  <img class="price-picture-right" src="images/プロテイン (3).jpg">
-  <div class="price-title">ご利用料金</div>
 
-  <!-- 上段：リボン（プレゼント告知など） -->
-  <div class="ribbon-row top">
-    <div class="ribbon ribon-present" role="note" aria-label="キャンペーンのご案内">
-      <div class="ribbon-title">今ならキャンペーン</div>
-      <p>入会費 <strong>10,000円相当</strong> プレゼント。さらに初月サポートが充実！</p>
-    </div>
-
-    <div class="ribbon" role="note" aria-label="体験レッスンのご案内">
-      <div class="ribbon-title">初回体験レッスン</div>
-      <p>プロのコーチングをまずは体験。設備見学・カウンセリングつき。</p>
-    </div>
-  </div>
-
-  <!-- 料金カード -->
-  <div class="price-container">
-    <!-- カード左 -->
-    <article class="card" aria-labelledby="regular-heading">
-      <span class="plan-label">Regular</span>
-      <h3 id="regular-heading">レギュラー会員</h3>
-      <div class="price">月額 14,800円（税抜）</div>
-      <p>一回のご利用時間は <strong>最長3時間</strong>。プロのコーチングと最高の環境で効率よくトレーニング。</p>
-    </article>
-
-    <!-- カード右 -->
-    <article class="card" aria-labelledby="premium-heading">
-      <span class="plan-label">Premium</span>
-      <h3 id="premium-heading">プレミアム会員</h3>
-      <div class="price">月額 19,800円（税抜）</div>
-      <p>ご利用時間は <strong>無制限</strong>。ワンランク上の環境で理想のカラダへ最短距離。</p>
-    </article>
-  </div>
-
-  <!-- 下段：もう一列のリボン（横並び） -->
-  <div class="ribbon-row bottom">
-    <div class="ribbon ribon-regular">
-      <div class="ribbon-title">レギュラー特典</div>
-      <p>ウェルカムセッション1回、基本プランニング、メールサポート。</p>
-    </div>
-    <div class="ribbon ribon-premium">
-      <div class="ribbon-title">プレミアム特典</div>
-      <p>個別メニュー作成、優先予約、食事指導、専用ラウンジのご利用。</p>
-    </div>
-  </div>
-</section>
-
-<!--====Web入会の流れ ====-->
-<section class="web-join" id="web-join">
-<div class="web-join-container">
-<div class="section-margin"></div>
-<div class="web-join-title">お申し込みはWeb入会が便利です。<br>24時間受付しております。
-</div>
-
-<div class="web-join-flow">
-<div class="point">➀</div>
-<div class="explain">
-メールアドレスをご入力
-</div>
-
-<img src="images/横矢印.png">
-
-<div class="point">②</div>
-<div class="explain">
-届いたメール内の<br>
-URLから入会手続き開始
-</div>
-
-<img src="images/横矢印.png">
-
-<div class="point">③</div>
-<div class="explain">
-Web入会手続き完了<br>
-<div class="notes">
-※初回費用（入会費・月額料金）をカード決済<br>させていただきます。
-</div>
-</div>
-
-<img src="images/横矢印.png">
-
-<div class="point">④</div>
-<div class="explain">
-ご来店頂きご利用開始！<br>
-<div class="notes">
-※ご本人確認・会員証のお渡し
-</div>
-</div>
-</div>
-
-<button class="btn-web-join"><a href="#" class="a-btn-web-join">
-Web入会はこちら<span class="small-font">(24時間受付)</span>　→
-</a></button>
-
-<div class="web-free-title">無料見学・体験　随時受付中！
-</div>
-
-<button class="btn-free-join"><a href="#" class="a-btn-web-join">
-無料見学・体験のご予約　→
-</a></button>
-</div>
-</section>
-<!--====よくあるご質問（FAQ） ====-->
-<section class="faq" id="faq">
-<div class="faq-title">
-よくあるご質問
-</div>
+<!--====FAQ =====-->
+<section id="faq">
+<h2 class="midashi">よくあるご質問</h2>
 
 <p class="faq-question js-question">
-<span>Q.</span>見学・体験は何回もできますか？</p>
+    <span class="faq-font">Q.</span>商品の返品・交換はできますか？</p>
 
 <p class="faq-answer">
-<span class="answer-space">A.</span>見学・体験は一回のみとさせて頂いております。</p>
+    <span class="faq-font">A.</span>ご注文の商品とお届けした商品が異なっていたり、お届けした商品が破損していた場合は
+    、商品到着日より7日以内にご連絡をお願いいたします。
+    なお、お客様のご都合による返品・交換は承っておりませんので、予めご了承下さい。
+</p>
 
 
 <p class="faq-question js-question">
-<span>Q.</span>友達や家族と一緒に体験できますか？</p>
+    <span class="faq-font">Q.</span>配送料はいくらですか？</p>
 
 <p class="faq-answer">
-<span class="answer-space">A.</span>はい。ぜひご一緒にご来店ください。</p>
+    <span class="faq-font">A.</span>配送料は配達する地域やご注文金額、配送手段によって異なります。<br>
+クロネコゆうパケットの場合：全国一律360円（税込み）
+</p>
 
 
 <p class="faq-question js-question">
-<span>Q.</span>シャワー室にアメニティはそろっていますか？</p>
+    <span class="faq-font">Q.</span>商品のお届け方法を教えてください。</p>
 
 <p class="faq-answer">
-<span class="answer-space">A.</span>はい。シャンプー・コンディショナー・ボディソープをご用意しております。身の回り品が買える自社企画自販機でも販売しておりますので手ぶらでも安心です。</p>
+    <span class="faq-font">A.</span>ヤマト運輸のクロネコゆうパケットにてお届けします。</p>
 
 
 <p class="faq-question js-question">
-<span>Q.</span>しつこい勧誘等の営業がこないか不安です。</p>
+    <span class="faq-font">Q.</span>自宅以外に商品を届けることは可能ですか？</p>
 
 <p class="faq-answer">
-<span class="answer-space">A.</span>ご安心ください。当店では勧誘等の営業行為は一切しておりません。結果が出るためご好評につき、地域拡大で店舗を増やす実績がございます。</p>
+    <span class="faq-font">A.</span>可能です。お届け先住所を設定する際にご希望のお届け先を指定してください。</p>
+
 
 <p class="faq-question js-question">
-<span>Q.</span>食事の指導とはどんな内容ですか？</p>
+    <span class="faq-font">Q.</span>注文後に支払い方法を変更することはできますか？</p>
 
 <p class="faq-answer">
-<span class="answer-space">A.</span>栄養学に基づいた一生もののカウンセリングを伝授させて頂きます。無理な食事制限は一切ございません。</p>
+    <span class="faq-font">A.</span>ご注文完了後にお支払方法を変更することはできません。予めご了承下さい。</p>
+
+<h2 class="announce">お探し物が<br>見つかりませんか？</h2>
+<button class="guidance-button"><a href="#contact" class="a-guidance">お問い合わせはこちら</a></button>
+
 </section>
-
 <!--====お問い合わせ ====-->
-<section class="contact" id="contact">
-<div class="contact-title">
-全施設共通お問い合わせ先
+<section id="contact">
+<h4 class="first-contact">お問い合わせ</h4>
+<h2>CONTACT</h2>
+<h3>お問い合わせの方は下記のフォームに必要事項をご入力ください。</h3>
+<p>
+※お問い合わせの内容により、こちらからの対応にお時間を頂戴する等でお電話を差し上げる場合がございます。
+あらかじめご了承ください。
+</p>
+<p>※メッセージ送信後、一週間以内にこちらからのお返事がない場合、メールシステムの一時的な障害や、
+    ご入力いただいたメールアドレスの間違い等が考えられます。お手数ですが、お電話にてご連絡ください。
+</p>
+<p>※Gmailなどのフリーメールでご連絡頂いた場合、自動返信メールが迷惑フォルダに振り分けられる
+    場合がございます。フリーメールをご利用の方は、念のため迷惑フォルダのご確認もお願い致します。
+    </p>
+<form>
+<div class="form-row">
+<div class="form-label">
+<label for="message">お問い合わせ内容</label>
+<span>必須</span>
+</div>
+<textarea id="message" name="message" rows="5"
+placeholder="お問い合わせ内容をこちらにご記入ください。" required></textarea> 
 </div>
 
-<div class="free-dial">
-<div class="size-free-dial">フリーダイヤル</div>
-<div class="dial-number">0120-XXX-XXX</div>
+<div class="form-row">
+<div class="form-label">
+<label for="name">お名前</label>
+<span>必須</span>
+</div>
+<input type="text" id="name" name="name" placeholder="例）山田　太郎" required>
 </div>
 
-<div class="telephon-time">
-<div class="reception">
-お電話受付時間
+<div class="form-row">
+<div class="form-label">
+<label for="furigana">フリガナ</label>
+<span>必須</span>
 </div>
-<div class="day-time">
-平日　9:00～19:00<br>
-土・日・祝日　10:00～18:00
+<input type="text" id="furigana" name="furigana"  required>
 </div>
-</div>    
+
+<div class="form-row">
+<div class="form-label">
+<label for="e-mail">メールアドレス</label>
+<span>必須</span>
+</div>
+<input type="e-mail" id="e-mail" name="e-mail" placeholder="例）abc@xyz.com" required>
+</div>
+
+<div class="form-row">
+<div class="form-label">
+<label for="e-mail">電話番号</label>
+<span>必須</span>
+</div>
+<input type="tel" id="tel" name="tel" required>
+</div>
+
+<div class="form-row">
+<div class="form-label">
+<button type="submit">送信</button>
+</div>
+</div>
+
+
+</form>
+<p>
+<h3>個人情報の取り扱いについて</h3>
+当サイトより取得した個人情報は適切な取り扱いに努めて参ります。
+個人情報保護法に定める例外事項を除き、第三者に提供、開示いたしません。
+</p>
+<h3>お問い合わせはお電話でも承ります<br>
+TEL.06-XXXX-XXXX</h3>
+<p>【受付時間】平日9:00～16:30<br>
+土曜・日曜・祝日、夏季休暇や年末年始などは休みをいただいております。</p>
 </section>
 
-<!--====SNSセクション ====-->
-<section id="sns" class="sns">
-  <div class="sns-title">Official SNS</div>
+ <!-- パララックス背景セクション -->
+    <section class="parallax-section">
+        <div>
+            <h3>あなたのそばに<br>'むすびや'</h3>
+            <h3>By your side<br>'Musubiya'</h3>
+        </div>
+    </section>
 
-  <!-- 上部のSNSアイコン行（既存） -->
-  <div class="sns-container">
-      <img src="images/Instagram_Glyph_White.png" class="sns-picture">
-    <img src="images/logo-white.png" class="sns-picture">
-    <img src="images/Facebook_Logo_Secondary.png" class="sns-picture"> 
-
-  </div>
-
-  <!-- YouTube / TikTok を横並び配置 -->
-  <div class="sns-platforms">
-    <!-- YouTube -->
-    <div class="platform">
-      <div class="platform-title">YouTube</div>
-      <div class="thumb-youtube"></div>
-    </div>
-
-    <!-- TikTok -->
-    <div class="platform">
-      <div class="platform-title">TikTok</div>
-      <div class="thumb-tiktok"></div>
-    </div>
-  </div>
-</section>
+    <!-- 通常のコンテンツ -->
+    <section class="content-section">
+        <h2></h2>
+        <p>世界にひとつだけの職人技の和風小物。</p>
+        <p>身につけると、よりぐんと増すリッチさ。<br>ぜひあなただけの特別な一点ものを<br>探してみてください。</p>
+    </section>
+    
+    <!-- 別のパララックスセクション -->
+    <section class="parallax-section" style="background-image: url('images/和服の女性.jpg');">
 
 <!--====フッター ====-->
-<footer>
-<img src="images/ロゴ.jpg" class="footer-img">
-<ul class="footer-wrapper">
-<li><a href="#top-view">HOME</a></li>
-<li><a href="#feature-section">サービスの特徴</a></li>
-<li><a href="#training-flow">トレーニングの流れ</a></li>
-<li><a href="#price-section">ご利用料金</a></li>
-<li><a href="#faq">よくあるご質問</a></li>
-<li><a href="#contact">お問い合わせ</a></li>
-</ul>
-<small class="copyright">&copy;株式会社クロスライン
-</small>
+<footer id="footer">
+株式会社　結日屋<br>
+大阪府大阪市北区梅田X丁目X-X　XXXXX<br>
+TEL 06-XX-XXXX/FAX 06-XXXX-XXXX<br>
+<br>
+Official SNS<br>
+<img src="images/logo-white.png" class="sns" width="20px" height="20px">
+<img src="images/Instagram_Glyph_White.png" class="sns" width="20px" height="20px">
+<br>
+<br>
+プライバシーポリシー<br>
+むすびや利用規約<br>
+特定商取引法に基づく表記<br>
+<br>
+<br>
+<!--====back-to-top ====-->
+<div id="back-to-top">TOP</div></div>
+<small>&copy;2026 Musubiya </small>
 </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+<script src="main.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
